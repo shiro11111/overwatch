@@ -23,5 +23,4 @@ export class ProfileComponent implements OnInit {
     this.info$ = this.store.select('profileState').pipe(
      map((state: ProfileState) => state && state.info));
   }
-
 }
