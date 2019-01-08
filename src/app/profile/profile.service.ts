@@ -68,7 +68,7 @@ export class ProfileService {
       }
     };
 
-    let normalizedData = {};
+    let normalizedData = {entities: {}, result: {}};
     of(dataMock).subscribe(data => {
       normalizedData = normalize(data, completeStats);
       console.log(normalizedData);
