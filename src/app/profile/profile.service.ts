@@ -66,7 +66,7 @@ export class ProfileService {
           "medalsGold": 32
         }
       }
-    }
+    };
 
     let normalizedData = {};
     of(dataMock).subscribe(data => {
