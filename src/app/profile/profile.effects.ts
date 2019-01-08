@@ -18,7 +18,7 @@ export class ProfileEffects {
 
   @Effect() loadInfo$ = this.actions$.pipe(
     ofType('LOAD_PROFILE_INFO'),
-    switchMap(() => this.service.loadInfo('battlenet', 'Europe', 'ghostdragon').pipe(
+    switchMap(() => this.service.loadInfo('pc', 'eu', 'DiablosNinja-2530').pipe(
       map((res: CompleteStats) => (new LoadProfileInfoSuccess(res))),
       catchError((error: HttpErrorResponse) => of(new LoadProfileInfoFail(error)))
     ))

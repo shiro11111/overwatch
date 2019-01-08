@@ -5,13 +5,15 @@ export interface CompleteStats {
   icon?: string;
   name?: string;
   level?: number;
+  quickPlayStats?: QuickPlay;
   levelIcon?: string;
   prestige?: number;
   prestigeIcon?: string;
   rating?: string;
   ratingIcon?: string;
   gamesWon?: number;
-  quickPlayStats?: QuickPlay;
   competitiveStats?: Competitive;
 }
+
+
 

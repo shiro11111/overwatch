@@ -7,6 +7,7 @@ export const LOAD_PROFILE_INFO = 'LOAD_PROFILE_INFO';
 export const LOAD_PROFILE_INFO_SUCCESS = 'LOAD_PROFILE_INFO_SUCCESS';
 export const LOAD_PROFILE_INFO_FAIL = 'LOAD_PROFILE_INFO_FAIL';
 export const PROFILE_INFO_CHANGE_PARAMS = 'PROFILE_INFO_CHANGE_PARAMS';
+export const ADD_ENTITIES = 'ADD_ENTITIES';
 
 export class LoadProfileInfo implements Action {
   readonly type = LOAD_PROFILE_INFO;
