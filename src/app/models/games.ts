@@ -1,4 +1,4 @@
 export interface Games {
-  played: number;
+  played?: number;
   won?: number;
 }

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { CompleteStats } from '../models/completeStats';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { normalize } from 'normalizr';
+import { denormalize, normalize } from 'normalizr';
 import { completeStats } from '../schemas/schemas';
 
 @Injectable({
@@ -68,9 +68,13 @@ export class ProfileService {
       }
     }
 
+    let normalizedData = {};
     of(dataMock).subscribe(data => {
-      const normalizedData = normalize(data, completeStats);
+      normalizedData = normalize(data, completeStats);
       console.log(normalizedData);
+
+      const denormalizedData = denormalize('cats', completeStats, normalizedData.entities);
+      console.log(denormalizedData);
     });
 
     return this.http.get(url);
